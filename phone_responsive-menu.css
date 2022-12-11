@@ -8,9 +8,11 @@ body{
     background-color: rgb(181, 219, 254);
     scroll-behavior: smooth;
 }
-
-.header{
+header{
     width: 100%;
+}
+.header{
+    width: 100vw;
     display: grid;
     grid-template-areas: 'logobox menu loginbox';
     background-color: aliceblue;
@@ -53,7 +55,7 @@ body{
 }
 .menubox{
     grid-area: menu;
-    width: 68vw;
+    width: 70vw;
     border: solid 2px red;
     display: flex;
     justify-content: flex-start;
@@ -99,7 +101,7 @@ body{
     color: aliceblue;
 }
 
-@media (max-width: 1023px) and (min-width: 768px){
+@media (min-width: 768px) and (max-width: 1023px){
     html{
         font-size: 14px;
     }
@@ -107,7 +109,7 @@ body{
         width: 20vw;
     }
     .menubox{
-        width: 65vw;
+        width: 66vw;
     }
     .loginbox{
         width: 14vw;
@@ -119,7 +121,6 @@ body{
         font-size: 12px;
     }
     .header{
-        max-width: 100vw;
         display: grid;
         grid-template-areas: 'logobox logobox' 'loginbox loginbox' 'hamcon hamcon' 'menu menu';
         background-color: aliceblue;
@@ -127,7 +128,7 @@ body{
         padding: 0.15rem 0rem;
     }
     .logobox{
-        width: 100vw;
+        width: 100%;
         text-align: left;
         /* border: 1px solid red; */
     }
@@ -142,6 +143,7 @@ body{
         box-shadow: 1px 1px 3px rgba(255, 255, 255, 0.662);
     }
     .hamcontainer{
+        width: 100%;
         grid-area: hamcon;
         display: flex;
         justify-content: space-between;
@@ -191,7 +193,6 @@ body{
     }
 
     .menubox{
-        max-width: 100%;
         width: 100vw;
         flex-direction: column;
         height: 0;
@@ -203,16 +204,16 @@ body{
         height: calc(31px*11);
     }
     .menu{
+        width: 100%;
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
-        width: 100%;
         height: fit-content;
     }
     .menu li{
         border: none;
         border-radius: 0;
-        width: 90%;
+        width: 100%;
         height: fit-content;
         margin: 0 0;
         padding: 0.65rem 0.95rem;
