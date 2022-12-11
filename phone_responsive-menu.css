@@ -8,11 +8,9 @@ body{
     background-color: rgb(181, 219, 254);
     scroll-behavior: smooth;
 }
-header{
-    width: 100%;
-}
+
 .header{
-    width: 100vw;
+    width: 100%;
     display: grid;
     grid-template-areas: 'logobox menu loginbox';
     background-color: aliceblue;
@@ -22,7 +20,7 @@ header{
 .logobox{
     grid-area: logobox;
     width: 18vw;
-    border: solid 2px red;
+    /* border: solid 2px red; */
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -55,8 +53,8 @@ header{
 }
 .menubox{
     grid-area: menu;
-    width: 70vw;
-    border: solid 2px red;
+    width: 69vw;
+    /* border: solid 2px red; */
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -86,8 +84,8 @@ header{
 }
 .loginbox{
     grid-area: loginbox;
-    width: 12vw;
-    border: solid 2px red;
+    width: 11vw;
+    /* border: solid 2px red; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -118,9 +116,10 @@ header{
 
 @media (max-width: 767px){
     html{
-        font-size: 12px;
+        font-size: 13px;
     }
     .header{
+        width: 100%;
         display: grid;
         grid-template-areas: 'logobox logobox' 'loginbox loginbox' 'hamcon hamcon' 'menu menu';
         background-color: aliceblue;
@@ -143,7 +142,7 @@ header{
         box-shadow: 1px 1px 3px rgba(255, 255, 255, 0.662);
     }
     .hamcontainer{
-        width: 100%;
+        width: 100vw;
         grid-area: hamcon;
         display: flex;
         justify-content: space-between;
@@ -201,7 +200,7 @@ header{
         /* border: 1px solid red; */
     }
     #menubox.togglemenubox{
-        height: calc(31px*11);
+        height: calc(33px*11);
     }
     .menu{
         width: 100%;
